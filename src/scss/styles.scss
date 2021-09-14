@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    h5{
+        background-color: black;
+        color: white;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        margin: 0 45px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    nav{
+        font-weight: 700;
+        font-size: 0.9rem;
+        li:hover{
+            cursor: pointer;
+        }
+        .main__nav{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 80px;
+            justify-items: center;
+            align-items: center;
+            #title{
+                font-size: 1.5rem;
+            }
+            ul{
+                display: flex;
+                li{
+                    padding: 0 40px;
+                }
+            }
+        }
+        .sub__nav{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 40px;
+            justify-items: center;
+            align-items: center;
+        }
+    }
+}
+
+main{
+    .main__items{
+        display: flex;
+        margin-top: 140px;
+        .main__item{
+            width: 50vw;
+            height: 100vh;
+            position: relative;
+            &:hover{
+                opacity: 0.3;
+                transition: 0.3s;
+                cursor: pointer;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .img__texts{
+                position: absolute;
+                top: 60%;
+                left: 40%;
+                h1{
+                    color: #A49C88;
+                    font-weight: 700;
+                    font-size: 2.2rem;
+                    &:nth-child(2){
+                        color: #CECBC1; 
+                    }
+                }
+                h2{
+                    color: #CECBC1;
+                    font-weight: 500;
+                    font-size: 2rem;
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+
+    .new-arrivals{
+        margin-top: 140px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .new-arrival__items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100vh;
+            margin-top: 50px;
+            .new-arrivals__item{
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                    transition: 0.3s;
+                }
+                img{
+                    width: 100%;
+                    height: 90vh;
+                }
+                .item__texts{
+                    margin-top: 20px;
+                    h6{
+                        font-size: 0.8rem;
+                        padding-left: 10px;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .new-arrival__menu{
+            width: 100vw;
+            display: flex;
+            margin-top: 50px;
+            .wrapper{
+                width: 100%;
+                height: 240px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #f0f4f3;
+                    transition: .5s;
+                }
+                h4{
+                    font-weight: 700;
+                    font-size: 1.1rem; 
+                }
+            }
+        }
+    }
+}
+
+footer{
+    margin: 70px;
+    .footer__items{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 150px;
+        h5{
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding-bottom: 15px;
+        }
+        .newsletter{
+            display: flex;
+            flex-direction: column;
+            padding: 0 30px 10px 30px;
+            .newsletter__form{
+                display: flex;
+                input{
+                    width: 150px;
+                    height: 30px;
+                    &::placeholder{
+                        color: lightgray;
+                        padding-left: 15px;
+                    }
+                }
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 160px;
+                    height: 37px;
+                    background-color: #f0f4f3;
+                    text-decoration: none;
+                    margin-left: 10px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    span{
+                        font-weight: 700;
+                        font-size: 0.9rem;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .shopping, .company{
+            width: 100%;
+            padding: 0 30px 10px 30px;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    font-size: 0.8rem;
+                    width: 150px;
+                    padding: 5px 0;
+                    &:hover{
+                        cursor: pointer;
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+    .footer__company{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        & > *{
+            width: 140px;
+        }
+        ul{
+            display: flex;
+            li:nth-child(2){
+                padding-left: 10px;
+            }
+        }
+    }
+}
